@@ -1,0 +1,15 @@
+body{
+    max-width: 1600px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: gray;
+    margin: 0 auto;
+}
+
+#content{
+    align-content: center;
+    text-align: center;
+}
+
+/* hr{
+    color: black;
+} */
