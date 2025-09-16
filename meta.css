@@ -2,14 +2,112 @@ body{
     max-width: 1600px;
     font-family: 'Times New Roman', Times, serif;
     background-color: gray;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;   
+    align-items: center;       
+    margin: 0;
+    /* height: 100hv; */
+    overflow-y: auto;
 }
 
 #content{
     align-content: center;
     text-align: center;
+    padding: 50px;
+    max-width: 800px;          
+    padding: 2em;
+    max-height: 90vh;
 }
 
-/* hr{
-    color: black;
-} */
+#topics {
+    margin: 0 auto;        
+    max-width: 800px;      
+    padding: 2em 10em;          
+    text-align: left;      
+}
+
+.list {
+    list-style-type: none; 
+    font-size: 22px;
+    margin: 0;             
+    padding: 0;   
+    line-height: 30px;
+}
+
+p{
+    font-size: 1.5em;
+    color: rgb(8, 60, 190);
+}
+
+h2{
+    font-size: 2.3em;
+    font-weight: bold;
+    text-align: center;
+}
+
+hr {
+    border: none;           
+    height: 3px;            
+    background-color: rgb(8, 60, 190); 
+    margin: 20px 60px;         
+}
+
+img {
+    max-width: 100%;  
+    height: auto;      
+    display: block;
+    margin: 0 auto;    
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;   
+        align-items: flex-start;  
+        padding: 1em;
+    }
+
+    #content {
+        max-width: 95%;           
+        padding: 1em;
+        max-height: none;         
+    }
+
+    #topics {
+        padding: 1em 2em;         
+    }
+
+    .list {
+        font-size: 18px;          
+        line-height: 1.4em;       
+    }
+
+    p {
+        font-size: 1.2em;         
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    hr {
+        margin: 10px 20px;        
+    }
+}
+
+@media (max-width: 480px) {
+    #topics {
+        padding: 1em;             
+    }
+
+    .list {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
