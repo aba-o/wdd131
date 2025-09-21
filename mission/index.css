@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Deseret&display=swap');
+
+body{
+    max-width: 1600px;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 20px 50px;
+    font-size: 20px;
+}
+
+#content{
+    max-width: 60%;
+    height: 100vh;
+}
+
+#content h1{
+    font-size: 1.95rem;
+    text-align: center;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.first-break{
+    background-color: rgb(109, 104, 104);
+    margin-top: -30px;
+}
+
+#content h4{
+    font-size: 1.2em;
+    text-align: center;
+    color: #006EB6;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.start-li{
+    color: black;
+    font-style: italic;
+    font-size: 1.25em;
+}
+
+#list{
+    list-style-type: decimal;
+    font-size: 1.5rem;
+    line-height: 40px;
+}
+
+li{
+    margin: 30px;
+}
+
+#logo{
+    text-align: center;
+    color: #006EB6;
+    width: 20%;
+    margin: 0 auto;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+#logo hr{
+    background-color: #006EB6;
+    height: 2px;
+    border: none;
+    margin-top: -60px;
+    margin-bottom: -50px;
+    
+}
+
+
+#logo h2{
+    font-size: 2em;
+}
+
+#logo p{
+    font-size: 1.5em;
+    letter-spacing: 1px;
+}
+
+.intro{
+    font-size: 1.2em;
+    line-height: 35px;
+    letter-spacing: 0.6px;
+}
+
