@@ -38,4 +38,10 @@ selectElem.addEventListener('change', function(){
     console.log(codeValue);
     document.getElementById(codeValue).style.color = "red"
 })
-                
+
+const image = document.querySelector("img");
+image.setAttribute("src", "ponder/js-html-css.png");
+image.setAttribute("alt", "still the same logo but just so I know");
+
+
+document.body.style.backgroundColor = "blue"

@@ -60,6 +60,10 @@ img {
     margin: 0 auto;    
 }
 
+.blue{
+    background-color: #035f9c;
+}
+
 @media (max-width: 768px) {
     body {
         flex-direction: column;   
