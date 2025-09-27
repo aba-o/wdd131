@@ -8,11 +8,14 @@ body{
     margin: 0 auto;
     padding: 20px 50px;
     font-size: 20px;
+    
 }
 
 #content{
-    max-width: 60%;
-    height: 100vh;
+    max-width: 65%;
+    margin: 0 auto;
+    padding: 30px;
+    border: black 2px solid;
 }
 
 #content h1{
@@ -52,33 +55,6 @@ li{
     margin: 30px;
 }
 
-#logo{
-    text-align: center;
-    color: #006EB6;
-    width: 20%;
-    margin: 0 auto;
-    font-size: 30px;
-    text-transform: uppercase;
-}
-
-#logo hr{
-    background-color: #006EB6;
-    height: 2px;
-    border: none;
-    margin-top: -60px;
-    margin-bottom: -50px;
-    
-}
-
-
-#logo h2{
-    font-size: 2em;
-}
-
-#logo p{
-    font-size: 1.5em;
-    letter-spacing: 1px;
-}
 
 .intro{
     font-size: 1.2em;
@@ -86,3 +62,17 @@ li{
     letter-spacing: 0.6px;
 }
 
+#logo {
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+    height: auto; 
+}
+
+#theme-select {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    font-size: 1rem;
+}
