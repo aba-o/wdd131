@@ -55,11 +55,11 @@ dialog {
         position: absolute;
         right: 15vh;
     }
-    .viewer {
+    /* .close-viewer {
         margin: 50px;
         padding: 50px;
     }
-    .viewer img {
+    .close-viewer img {
         max-width: 800px;
-    }
+    } */
 }

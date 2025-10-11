@@ -44,4 +44,4 @@ image.setAttribute("src", "ponder/js-html-css.png");
 image.setAttribute("alt", "still the same logo but just so I know");
 
 
-document.body.style.backgroundColor = "blue"
+// document.body.style.backgroundColor = "blue"
