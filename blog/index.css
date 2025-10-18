@@ -53,6 +53,7 @@ article h2{
     #blog-articles .book-club{
         display: grid;
         grid-template-columns: 1fr 2fr;
+        padding-right: 0px;
         
     }
     .details {
@@ -66,5 +67,37 @@ article h2{
     article {
         padding-left: 140px;
         padding: 40px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        max-width: 1200px;
+        margin: 0 auto; 
+    }
+
+    nav {
+        padding: 30px;
+        font-size: 1.2rem;
+    }
+
+    .main-nav {
+        grid-template-columns: repeat(4, 120px); 
+        justify-content: end;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 3fr 1fr; 
+        gap: 40px;
+    }
+
+    article {
+        padding: 60px;
+        font-size: 1.1rem;
+    }
+    footer {
+        font-size: 1rem;
+        padding: 20px;
     }
 }
