@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+header, footer{
+    text-align: center;
+}
+nav{
+    border-bottom: 3px solid gold;
+    border-top: 3px solid gold;
+    text-align: right;
+    padding: 20px;
+    margin: 5px;
+    margin-bottom: 60px;
+}
+nav a{
+    text-decoration: none;
+    color: red;
+}
+.main-nav{
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    justify-content: end;
+    justify-items: end;
+}
+#content{
+    border-top: 3px solid gold;
+    border-bottom: 3px solid gold;
+    margin: 5px;
+    padding: 10px 50px;
+}
+#blog-articles{
+    /* display: grid; */
+    color: black;
+    /* grid-template-columns: 3fr 1fr; */
+    /* grid-template-rows: 1fr 3fr; */
+}
+.details{
+    text-align: right;
+    padding: 25px;
+}
+article img{
+    display: block;
+    margin: auto;
+}
+article h2{
+    color: red;
+    padding: 5px;
+}
+
+@media screen and (min-width: 680px) {
+    #blog-articles .book{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        
+    }
+    .details {
+        border-right: 3px solid gold;
+        border-top: none;
+    }
+    main {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+    article {
+        padding-left: 140px;
+        padding: 40px;
+    }
+}
