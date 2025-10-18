@@ -50,7 +50,7 @@ article h2{
 }
 
 @media screen and (min-width: 680px) {
-    #blog-articles .book{
+    #blog-articles .book-club{
         display: grid;
         grid-template-columns: 1fr 2fr;
         
@@ -61,7 +61,7 @@ article h2{
     }
     main {
         display: grid;
-        grid-template-columns: 3fr 1fr;
+        grid-template-columns: 4fr 1fr;
     }
     article {
         padding-left: 140px;
