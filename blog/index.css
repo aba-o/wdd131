@@ -72,12 +72,11 @@ article h2{
 
 @media screen and (min-width: 1000px) {
     body {
-        max-width: 1200px;
+        max-width: 1600px;
         margin: 0 auto; 
     }
 
     nav {
-        padding: 30px;
         font-size: 1.2rem;
     }
 
@@ -98,6 +97,5 @@ article h2{
     }
     footer {
         font-size: 1rem;
-        padding: 20px;
     }
 }
