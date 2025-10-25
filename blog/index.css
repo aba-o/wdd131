@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 header, footer{
     text-align: center;
@@ -18,6 +17,10 @@ nav a{
     text-decoration: none;
     color: #2e0854;
 }
+.book-club{
+    border-top: 3px gold solid;
+    padding: 10px;
+}
 .main-nav{
     display: grid;
     grid-template-columns: repeat(3, 100px);
@@ -25,7 +28,6 @@ nav a{
     justify-items: end;
 }
 #content{
-    border-top: 3px solid gold;
     border-bottom: 3px solid gold;
     margin: 5px;
     padding: 10px 50px;
@@ -54,6 +56,7 @@ article h2{
         display: grid;
         grid-template-columns: 1fr 2fr;
         padding-right: 0px;
+        border: none;
         
     }
     .details {
@@ -67,6 +70,9 @@ article h2{
     article {
         padding-left: 140px;
         padding: 40px;
+    }
+    .book-club{
+        margin: 20px;
     }
 }
 
