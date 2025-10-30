@@ -1,14 +1,14 @@
 
 /* form-demo.css */
 body {
-font-size: 1.2em;
+    font-size: 1.2em;
 }
 form {
-width: 50%;
-margin: 0 auto;
+    width: 50%;
+    margin: 0 auto;
 }
 h1, h2 {
-text-align: center;
+    text-align: center;
 }
 label {
     display: block;
@@ -34,7 +34,7 @@ button {
     cursor: pointer;
 }
 .errors {
-    white-space: pre-line; /*needed for 2 errors to be on separate lines*/
+    white-space: pre-line; /* keeps line breaks for multiple errors */
     color: red;
 }
 .hide {
