@@ -16,6 +16,18 @@ const aCourse = {
         this.sections[sectionIndex].enrolled++;
         renderSections(this.sections);
         }
+    },
+    dropStudent: function (sectionNum) {
+        const sectionIndex = this.sections.findIndex(
+            (section) => section.sectionNum == sectionNum
+        );
+        if (sectionIndex >= 0) {
+            // Only drop if there are students enrolled
+            if (this.sections[sectionIndex].enrolled > 0) {
+                this.sections[sectionIndex].enrolled--;
+                renderSections(this.sections);
+            }
+        }
     }
 };
 
@@ -42,8 +54,9 @@ document.querySelector("#enrollStudent").addEventListener("click", function () {
 
 document.querySelector('#courseName').textContent = aCourse.name;
 document.querySelector('#courseCode').textContent = aCourse.code;
-document.querySelector('img').setAttribute('src', aCourse.logo);
-document.querySelector('alt', 'JavaScript Logo');
-document.querySelector('img').style.width = "100px"
+const img = document.querySelector('img');
+img.setAttribute('src', aCourse.logo);
+img.setAttribute('alt','JavaScript Logo');
+img.style.width = "100px"
 
 console.log(aCourse.name);
