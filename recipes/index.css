@@ -1,0 +1,123 @@
+#content{
+    margin: 20px;
+}
+.hide{
+    display: none;
+}
+header img{
+    width: 100px;
+}
+hr{
+    margin: 12px 0 12px 0;
+}
+header{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.search img, .socials img{
+    width: 50px;
+}
+header h1{
+    align-self: flex-end;
+}
+img{
+    width: 50px;
+}
+.search-bar{
+    display: flex;
+    width: 250px;               
+    border: 2px solid black;     
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+}
+.search-input {
+    flex: 1;
+    padding: 12px;
+    border: none;              
+    font-size: 16px;
+    outline: none;
+}
+.search-btn {
+    border: none; 
+    border-left: 2px solid #ccc;
+    background: white;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-btn img {
+    width: 22px;                
+    height: 22px;
+}
+#recipes{
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.image{
+    width: 100%;
+}
+.food-type{
+    width: 30%;
+    margin-top: 5px;
+}
+.food-name{
+    color: rgb(42, 96, 96);
+}
+a, .socials{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 14px 2px 14px 2px;
+}
+.rating{
+    font-size: 20px;
+}
+@media (min-width: 780px) {
+    #recipes .image{
+        width: 45%;
+        height: auto;
+    }
+    #recipes {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: flex-start;
+        padding: 35px;
+    }
+    .details, .hide{
+        flex-direction: column;
+        justify-content: flex-end;
+        display: flex;
+        width: 100%;
+    }
+    .food-type{
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+    .food-name{
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+    .rating{
+        font-size: 52px;
+    }
+    .hide{
+        font-size: 32px;
+    }
+    footer{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    a{
+        align-self: flex-start;
+        margin-top: 30px;
+    }
+}
