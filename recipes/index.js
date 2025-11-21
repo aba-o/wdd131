@@ -279,18 +279,53 @@ const recipes = [
 		rating: 4
 	}
 ];
+let recipeContainer = document.querySelector("#recipes-container");
+let randomNum = Math.floor(Math.random() * recipes.length);
+console.log(randomNum);
 
-let searchButton = document.querySelector(".search-btn");
-searchButton.addEventListener("click", search);
+let form = document.querySelector(".search-bar");
+form.addEventListener("submit", function(e){
+    e.preventDefault();
+    search();
+});
+
+
+function search() {
+    let recipeQuerry = document.querySelector(".search-input").value;
+    let filterRecipes = recipes.filter(function(recipe) {
+        return (
+            recipe.name.toLocaleLowerCase().includes(recipeQuerry.toLocaleLowerCase()) ||
+            recipe.description.toLocaleLowerCase().includes(recipeQuerry.toLocaleLowerCase()) ||
+            recipe.tags.find(tag => tag.toLocaleLowerCase().includes(recipeQuerry.toLocaleLowerCase()))
+        );
+    });
+
+    let sortedRecipes = filterRecipes.sort(compareRecipes);
+
+    function compareRecipes(a, b) {
+        if (a.rating < b.rating) return -1;
+        if (a.rating > b.rating) return 1;
+        return 0;
+    }
+
+    recipeContainer.innerHTML = "";               
+    sortedRecipes.forEach(function(recipe){
+        renderRecipe(recipe);                     
+    });
+}
+
+
+
 
 function tagTemplate(tags) {
     return tags.map((tag)=> `<button>${tag}</button>`).join(' ');
 }
 
+
 const container = document.getElementById("content"); 
 const footer = container.querySelector("footer");
 
-recipes.forEach(recipe => {
+function recipeTemplate(recipe){
     const article = document.createElement("article");
     article.id = "recipes";
 
@@ -298,33 +333,53 @@ recipes.forEach(recipe => {
         <img class="image" src="${recipe.image}" alt="${recipe.name}">
         <section class="details">
             <div class="food-type">
-                <button>${tagTemplate(recipe.tags)}</button>
+                ${tagTemplate(recipe.tags)}
             </div>
             <h2 class="food-name">${recipe.name}</h2>
-            <span class="rating" role="img" aria-label="Rating: ${recipe.rating} out of 5 stars">
+            <span class="rating">
                 ${"⭐".repeat(recipe.rating)}${"☆".repeat(5 - recipe.rating)}
             </span>
             <p class="hide">${recipe.description}</p>
         </section>
     `;
 
-    container.insertBefore(article, footer);
-});
+    return article;
+}
 
-// for the aria star labeling
-// function difficultyTemplate(rating) {
-//         let html = `<span
-//     class="rating"
-//     role="img"
-//     aria-label="Rating: ${rating} out of 5"
-// >  Difficulty: `
-//     for (let i = 1; i <= 5; i++) {
-//     if (i <= rating) {
-//         html += `<span aria-hidden="true" class="icon-boot"> 🥾</span>`
-//     } else {
-//         html += `<span aria-hidden="true" class="icon-empty">▫️</span>`
-//     }			
-//     }
-//     html += `</span>`
-//     return html
-// }
+function renderRecipe(recipe) {
+    const article = recipeTemplate(recipe);
+    recipeContainer.appendChild(article); 
+}
+
+
+function init() {
+    renderRecipe(recipes[randomNum]);
+}
+
+init();
+
+
+
+
+
+// recipes.forEach(recipe => {
+//     const article = document.createElement("article");
+//     article.id = "recipes";
+
+//     article.innerHTML = `
+//         <img class="image" src="${recipe.image}" alt="${recipe.name}">
+//         <section class="details">
+//             <div class="food-type">
+//                 ${tagTemplate(recipe.tags)}
+//             </div>
+//             <h2 class="food-name">${recipe.name}</h2>
+//             <span class="rating" role="img" aria-label="Rating: ${recipe.rating} out of 5 stars">
+//                 ${"⭐".repeat(recipe.rating)}${"☆".repeat(5 - recipe.rating)}
+//             </span>
+//             <p class="hide">${recipe.description}</p>
+//         </section>
+//     `;
+
+//     container.insertBefore(article, footer);
+// });
+
