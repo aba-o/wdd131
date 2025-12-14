@@ -352,8 +352,8 @@ h3{
 .subscribe-form button {
     padding: 10px;
     border: none;
-    background-color: var(--secondary-color);
-    color: black;
+    background-color: black;
+    color: #F5EFFF;
     border-radius: 6px;
     cursor: pointer;
     font-size: 0.95rem;
