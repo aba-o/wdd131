@@ -10,7 +10,7 @@ function toggleMenu(){
 
 
 //VOLUNTEER COUNT 
-let volunteerCount = 128; 
+let volunteerCount = 108; 
 const countDisplay = document.getElementById("count-number");
 
 // Animate count from start → end
@@ -103,7 +103,6 @@ function aboutHandler(event) {
         return;
     }
 
-    // SUCCESS: remove form and show message
     aboutForm.remove();
     const message = document.createElement('p');
     message.textContent = 'Thank you for sharing your story. We will be in touch!';

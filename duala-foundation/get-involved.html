@@ -41,12 +41,9 @@
                 <a href="get-involved.html">Get Involved</a>
             </nav>
             <img class="logo" src="images/dual_foundation-logo.png" alt="Duala Foundation Logo">
-            <form class="search-bar">
-                <input type="search" placeholder="Find a recipe" class="search-input">
-                <button type="submit" class="search-btn">
+            <button type="submit" class="search-btn">
                     <p>🔍</p>
                 </button>
-            </form>
         </header>
         <main class="get-involved">
             <h1>Become a Volunteer</h1>
@@ -55,6 +52,11 @@
                 At the Duala Foundation, volunteers play a vital role in expanding access to education, empowering young women, supporting rural schools, and helping communities grow. 
                 Whether you want to teach, assist during events, or support outreach programs, there is a place for you here. 
             </p>
+            <div class="volunteer-count">
+                <h3>
+                    <span id="count-number">0</span> <strong>Volunteers</strong>
+                </h3>
+            </div>
 
             <h2>Get Involved</h2>
             <p class="intro">
@@ -97,11 +99,6 @@
                     <button class="button" type="submit">Send</button>
                 </form>
             </section>
-            <div class="volunteer-count">
-                <h3>
-                    <span id="count-number">0</span> <strong>Volunteers</strong>
-                </h3>
-            </div>
         </main>
         <footer class="site-footer">
             <div class="footer-container">
@@ -138,7 +135,7 @@
                     <h4>Subscribe</h4>
                     <p>Simply enter your email below:</p>
 
-                    <form class="subscribe-form">
+                    <form class="subscribe-form" label="Subscribe to the dual foundation">
                         <input type="email" placeholder="Your email address" required>
                         <button type="submit">Subscribe</button>
                     </form>
