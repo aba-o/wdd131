@@ -1,5 +1,12 @@
 let btn = document.querySelector('.menu-btn');
 const menu = document.querySelector('nav');
+const heroImage = document.querySelector('.hero-image');
+const modal = document.querySelector('.hero-modal');
+const modalImage = modal.querySelector('.modal-image');
+const closeButton = modal.querySelector('.close-viewer');
+const servicesContainer = document.querySelector(".services");
+const serviceForm = document.querySelector(".search-bar2");
+const serviceInput = document.querySelector(".search-input2");
 
 btn.addEventListener('click', toggleMenu);
 
@@ -82,22 +89,80 @@ const services = [
 ];
 
 
+heroImage.addEventListener('click', openModal);
 
-const servicesContainer = document.querySelector(".services");
+function openModal(e) {
+    const img = e.target;
 
-services.forEach(service => {
-    const serviceArticle = document.createElement("article");
-    serviceArticle.classList.add("service-item");
+    const src = img.getAttribute('src');
+    const alt = img.getAttribute('alt');
 
-    serviceArticle.innerHTML = `
+    modalImage.src = "images/about-us.jpg";
+    modalImage.alt = "Founders of The Duala Foundation";
+
+    modal.showModal();
+}
+
+// Close modal button
+closeButton.addEventListener('click', () => {
+    modal.close();
+});
+
+// Close when clicking outside content
+modal.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.close();
+    }
+});
+
+
+
+function renderService(service) {
+    const article = document.createElement("article");
+    article.classList.add("service-item");
+
+    article.innerHTML = `
         <img class="service-img" src="${service.image}" alt="${service.alt}">
         <div class="service-content">
-            <h3>${service.title}</h3>
+            <h4>${service.title}</h4>
             <p class="service-duration">${service.duration}</p>
             <p class="description">${service.description}</p>
             <a href="#" class="service-btn">Support this Program</a>
         </div>
     `;
 
-    servicesContainer.appendChild(serviceArticle);
+    servicesContainer.appendChild(article);
+}
+
+function renderAllServices() {
+    servicesContainer.innerHTML = "";
+    services.forEach(renderService);
+}
+renderAllServices();
+
+
+serviceForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    searchServices();
 });
+
+function searchServices() {
+    const query = serviceInput.value.toLowerCase();
+
+    const filteredServices = services.filter(service => {
+        return (
+            service.title.toLowerCase().includes(query) ||
+            service.duration.toLowerCase().includes(query) ||
+            service.description.toLowerCase().includes(query)
+        );
+    });
+
+    servicesContainer.innerHTML = "";
+
+    if (filteredServices.length === 0) {
+        servicesContainer.innerHTML = `<p>No services found.</p>`;
+        return;
+    }
+
+    filteredServices.forEach(renderService);
+}
