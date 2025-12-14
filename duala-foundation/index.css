@@ -304,7 +304,7 @@ h3{
 }
 
 /* Columns */
-.footer-column h5 {
+.footer-column h5, .footer-column h4 {
     margin-bottom: 16px;
     font-size: 1.1rem;
     color: var(--accent1-color);
