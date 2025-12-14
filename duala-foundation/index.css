@@ -297,7 +297,7 @@ h2{
     padding: 10px;
     border: none;
     background-color: var(--secondary-color);
-    color: var(--accent1-color);
+    color: black;
     border-radius: 6px;
     cursor: pointer;
     font-size: 0.95rem;
